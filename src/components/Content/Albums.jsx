@@ -16,12 +16,12 @@ const Albums = ({ albums, setAlbums, user, showPhotos }) => {
             return data.map((item) => {
               return item;
             });
-          })
+          }, [])
         );
     } catch (error) {
       throw new Error('Something went wrong...');
     }
-  });
+  }, [user]);
 
   return (
     <section className={style.contentWrap}>
